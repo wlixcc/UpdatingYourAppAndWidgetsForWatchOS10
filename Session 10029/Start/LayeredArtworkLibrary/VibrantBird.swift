@@ -18,7 +18,7 @@ public struct VibrantBird: View {
     }
     
     public var body: some View {
-        Image("Vibrant \(bird.species.id)", bundle: .module)
+        Image("Vibrant \(bird.species?.id ?? "")", bundle: .module)
             .resizable()
             .scaledToFit()
             .scaleEffect(direction == .leading ? -1 : 1)

@@ -29,11 +29,11 @@ public struct RecentBackyardVisitorsView: View {
     public var body: some View {
         ForEach(events) { event in
             HStack {
-                BirdIcon(bird: event.bird)
+                BirdIcon(bird: event.bird!)
                     .frame(width: 60, height: 60)
                 
                 VStack(alignment: .leading) {
-                    Text(event.bird.speciesName)
+                    Text(event.bird!.speciesName)
                     Text(event.endDate, style: .relative)
                         .foregroundStyle(.secondary)
                         .font(.callout)

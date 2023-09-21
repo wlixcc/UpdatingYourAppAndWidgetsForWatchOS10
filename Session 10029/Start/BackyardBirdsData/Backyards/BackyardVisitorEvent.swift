@@ -11,8 +11,8 @@ import SwiftData
 
 @Model public final class BackyardVisitorEvent {
     @Attribute(.unique) public var id: UUID
-    public var backyard: Backyard!
-    public var bird: Bird!
+    public var backyard: Backyard?
+    public var bird: Bird?
     public var startDate: Date
     public var endDate: Date
     public var duration: TimeInterval

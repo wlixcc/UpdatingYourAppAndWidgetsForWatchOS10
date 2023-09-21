@@ -18,17 +18,17 @@ import SwiftData
     public var presentingVisitor: Bool = false
     public var isFavorite: Bool = false
     public var timeIntervalOffset: TimeInterval = TimeInterval(hours: 12)
-    public var birdFood: BirdFood
-    public var visitorEvents: [BackyardVisitorEvent]
+    public var birdFood: BirdFood?
+    public var visitorEvents: [BackyardVisitorEvent] = []
     
     @Relationship(inverse: \Plant.backyard)
-    public var leadingPlants: [Plant]
+    public var leadingPlants: [Plant] = []
     
     @Relationship(inverse: \Plant.backyard)
-    public var trailingPlants: [Plant]
+    public var trailingPlants: [Plant] = []
     
     public var floorVariant: Int = 0
-    public var fountainVariant: Int
+    public var fountainVariant: Int = 0
     public var leadingSilhouetteVariant: Int = 0
     public var trailingSilhouetteVariant: Int = 0
     public var leadingForegroundPlantVariant: Int = 0

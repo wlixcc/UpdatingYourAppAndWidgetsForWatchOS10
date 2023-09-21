@@ -14,12 +14,12 @@ private let logger = Logger(subsystem: "Backyard Birds Data", category: "Plant")
 @Model public final class Plant {
     @Attribute(.unique) public var id: UUID
     public var creationDate: Date
-    public var species: PlantSpecies!
+    public var species: PlantSpecies?
     public var backyard: Backyard?
     public var variant: Int
     
-    @Transient public var speciesName: String { species.info.name }
-    @Transient public var speciesSummary: String { species.info.summary }
+    @Transient public var speciesName: String { species?.info.name ?? "" }
+    @Transient public var speciesSummary: String { species?.info.summary ?? "" }
     
     public init(id: UUID = UUID(), variant: Int) {
         self.id = id

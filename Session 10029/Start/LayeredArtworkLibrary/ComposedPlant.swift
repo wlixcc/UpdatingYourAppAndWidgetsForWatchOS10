@@ -17,7 +17,7 @@ public struct ComposedPlant: View {
     
     public var body: some View {
         ZStack {
-            ForEach(plant.species.parts) { part in
+            ForEach(plant.species?.parts ?? []) { part in
                 Image(imageName(for: part), bundle: .module)
                     .resizable()
                     .scaledToFit()
@@ -26,7 +26,7 @@ public struct ComposedPlant: View {
     }
     
     func imageName(for part: PlantPart) -> String {
-        var result = "\(plant.species.id)/\(part.name)"
+        var result = "\(plant.species?.id ?? "")/\(part.name)"
         if part.variants != nil {
             result.append(" \(plant.variant + 1)")
         }

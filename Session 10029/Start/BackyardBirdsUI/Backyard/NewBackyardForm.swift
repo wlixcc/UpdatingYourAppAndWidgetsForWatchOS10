@@ -11,10 +11,10 @@ import BackyardBirdsData
 import LayeredArtworkLibrary
 
 public struct NewBackyardForm: View {
-    @Query(sort: [.init(\.name, comparator: .localizedStandard)])
+    @Query(sort: [.init(\BirdFood.name, comparator: .localizedStandard)])
     private var birdFood: [BirdFood]
     
-    @Query(sort: \.creationDate)
+    @Query(sort: \Plant.creationDate)
     private var plants: [Plant]
     
     @State private var name = ""

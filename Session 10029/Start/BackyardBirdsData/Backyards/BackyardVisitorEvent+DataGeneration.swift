@@ -44,7 +44,7 @@ extension BackyardVisitorEvent {
         logger.info("Generating current events.")
         let allBirds = try! modelContext.fetch(FetchDescriptor<Bird>(sortBy: [.init(\.creationDate)]))
         let birds = allBirds.shuffled(using: &random)
-        let firstHummingbird = allBirds.first(where: { $0.species.info == .hummingbird })!
+        let firstHummingbird = allBirds.first(where: { $0.species?.info == .hummingbird })!
         let backyards = try! modelContext.fetch(FetchDescriptor<Backyard>(sortBy: [.init(\.creationDate)]))
         let firstBackyard = backyards.first!
         
