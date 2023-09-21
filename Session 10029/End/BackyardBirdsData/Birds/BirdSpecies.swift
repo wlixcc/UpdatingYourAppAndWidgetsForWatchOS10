@@ -14,7 +14,7 @@ import SwiftData
     public var naturalScale: Double = 1
     public var parts: [BirdPart]
     
-    @Relationship(.cascade, inverse: \Bird.species)
+    @Relationship(deleteRule:.cascade, inverse: \Bird.species)
     public var birds: [Bird]
     
     @Transient
@@ -24,5 +24,6 @@ import SwiftData
         self.id = info.rawValue
         self.naturalScale = naturalScale
         self.parts = parts
+        self.birds = []
     }
 }

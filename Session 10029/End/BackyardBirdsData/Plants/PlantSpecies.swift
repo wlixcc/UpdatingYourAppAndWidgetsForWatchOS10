@@ -12,7 +12,7 @@ import SwiftData
     @Attribute(.unique) public var id: String
     public var parts: [PlantPart]
     
-    @Relationship(.cascade, inverse: \Plant.species)
+    @Relationship(deleteRule:.cascade, inverse: \Plant.species)
     public var plants: [Plant]
     
     @Transient
@@ -23,5 +23,6 @@ import SwiftData
     public init(info: PlantSpeciesInfo, parts: [PlantPart]) {
         self.id = info.rawValue
         self.parts = parts
+        self.plants = []
     }
 }

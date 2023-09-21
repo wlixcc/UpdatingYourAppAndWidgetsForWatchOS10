@@ -65,7 +65,7 @@ private let logger = Logger(subsystem: "BackyardBirdsData", category: "DataGener
         // The app content is complete, so now you can create the user's account.
         Account.generateAccount(modelContext: modelContext)
         
-        logger.info("Completed generating initial data")
+        logger.info("Done generating initial data.")
         lastSimulationDate = .now
     }
     
@@ -83,7 +83,7 @@ private let logger = Logger(subsystem: "BackyardBirdsData", category: "DataGener
 }
 
 public extension DataGeneration {
-    static let container = try! ModelContainer(for: schema, configurations: [.init(inMemory: DataGenerationOptions.inMemoryPersistence)])
+    static let container = try! ModelContainer(for: schema, configurations: [.init(isStoredInMemoryOnly: DataGenerationOptions.inMemoryPersistence)])
     
     static let schema = SwiftData.Schema([
         DataGeneration.self,

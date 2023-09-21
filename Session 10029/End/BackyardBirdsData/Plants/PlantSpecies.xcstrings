@@ -321,6 +321,7 @@
     },
     "Much more well behaved than the name implies." : {
       "comment" : "Plant 2 summary",
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -371,6 +372,9 @@
           }
         }
       }
+    },
+    "Much more well-behaved than the name implies." : {
+      "comment" : "Plant 2 summary"
     },
     "Quite independent and requires minimal attention." : {
       "comment" : "Plant 4 summary",

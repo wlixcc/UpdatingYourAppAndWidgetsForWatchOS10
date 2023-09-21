@@ -20,20 +20,20 @@ public struct ComposedBird: View {
     public var body: some View {
 //        TimelineView(.animation) { context in
             ZStack {
-                ForEach(bird.species.parts) { part in
+                ForEach(bird.species?.parts ?? []) { part in
 //                    if let frameCount = part.flipbookFrameCount {
                     if part.flipbookFrameCount != nil {
 //                        let frameIndex = frameIndex(date: context.date, frameCount: frameCount)
 //                        ForEach(0..<frameCount, id: \.self) { i in
                         let i = 0
-                            Image("\(bird.species.id)/\(part.name)\(i + 1)", bundle: .module)
+                            Image("\(bird.species?.id ?? "")/\(part.name)\(i + 1)", bundle: .module)
                                 .resizable()
                                 .scaledToFit()
                                 .colorMultiply(bird.colors.colorData(for: part.colorStyle).color)
 //                                .opacity(frameIndex == i ? 1 : 0)
 //                        }
                     } else {
-                        Image("\(bird.species.id)/\(part.name)", bundle: .module)
+                        Image("\(bird.species?.id ?? "")/\(part.name)", bundle: .module)
                             .resizable()
                             .scaledToFit()
                             .colorMultiply(bird.colors.colorData(for: part.colorStyle).color)

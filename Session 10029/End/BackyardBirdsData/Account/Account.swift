@@ -15,7 +15,7 @@ private let logger = Logger(subsystem: "BackyardBirdsData", category: "Account")
 @Model public final class Account {
     
     @Attribute(.unique) public var id: UUID
-    public var bird: Bird!
+    public var bird: Bird?
     public var joinDate: Date
     public var displayName: String
     public var emailAddress: String
@@ -27,6 +27,6 @@ private let logger = Logger(subsystem: "BackyardBirdsData", category: "Account")
         self.displayName = displayName
         self.emailAddress = emailAddress
         self.isPremiumMember = isPremiumMember
-        logger.notice("User \(self.id.uuidString) has been created with DisplayName: '\(self.displayName)' and is \(!self.isPremiumMember ? "not " : "")a premium user.")
+//        logger.notice("User \(self.id.uuidString) has been created with DisplayName: '\(self.displayName)' and is \(!self.isPremiumMember ? "not " : "")a premium user.")
     }
 }

@@ -20,7 +20,7 @@ extension BackyardVisitorEvent {
         let backyards = try! modelContext.fetch(FetchDescriptor<Backyard>(sortBy: [.init(\.creationDate)]))
         
         for minutesAgo in stride(from: 5, through: 300, by: 40) {
-            // The selection of birds for this hour.
+            // A selection of birds for this hour.
             for (backyard, bird) in zip(backyards, birds.shuffled(using: &random)) {
                 let date = Date.now.addingTimeInterval(TimeInterval(minutes: -Double(minutesAgo)))
                 let event = BackyardVisitorEvent(
@@ -41,10 +41,10 @@ extension BackyardVisitorEvent {
     static func generateCurrentEvents(modelContext: ModelContext) {
         var random = SeededRandomGenerator(seed: 4)
         
-        logger.info("Generating current events")
+        logger.info("Generating current events.")
         let allBirds = try! modelContext.fetch(FetchDescriptor<Bird>(sortBy: [.init(\.creationDate)]))
         let birds = allBirds.shuffled(using: &random)
-        let firstHummingbird = allBirds.first(where: { $0.species.info == .hummingbird })!
+        let firstHummingbird = allBirds.first(where: { $0.species?.info == .hummingbird })!
         let backyards = try! modelContext.fetch(FetchDescriptor<Backyard>(sortBy: [.init(\.creationDate)]))
         let firstBackyard = backyards.first!
         
@@ -61,10 +61,10 @@ extension BackyardVisitorEvent {
             if backyard == firstBackyard {
                 switch DataGenerationOptions.firstBackyardBirdStatus {
                 case .alreadyVisible:
-                    logger.info("Setting first bird to be initially visible")
+                    logger.info("Setting the first bird to be initially visible.")
                     backyard.presentingVisitor = true
                 case .fliesIn:
-                    logger.info("Setting first bird to fly in")
+                    logger.info("Setting the first bird to fly in.")
                     backyard.presentingVisitor = false
                 case .notVisiting:
                     fatalError()
@@ -76,19 +76,19 @@ extension BackyardVisitorEvent {
             }
             
         }
-        logger.info("Finished generating current events")
+        logger.info("Finished generating current events.")
     }
     
     static func generateFutureEvents(modelContext: ModelContext) {
         var random = SeededRandomGenerator(seed: 1)
         
-        logger.info("Generating future events")
+        logger.info("Generating future events.")
         let birds = try! modelContext.fetch(FetchDescriptor<Bird>(sortBy: [.init(\.creationDate)])).shuffled(using: &random)
         let backyards = try! modelContext.fetch(FetchDescriptor<Backyard>(sortBy: [.init(\.creationDate)]))
         
         let earliestDate = Date.now.addingTimeInterval(DataGenerationOptions.currentBirdsVisitingDuration)
         for hours in stride(from: 0, through: 48, by: 3) {
-            // The selection of birds for this hour.
+            // A selection of birds for this hour.
             for (backyard, bird) in zip(backyards, birds.shuffled(using: &random)) {
                 let event = BackyardVisitorEvent(
                     startDate: earliestDate.addingTimeInterval(TimeInterval(hours) * TimeInterval(hours: 1)),
@@ -101,6 +101,6 @@ extension BackyardVisitorEvent {
             }
         }
         
-        logger.info("Finished generating future events")
+        logger.info("Finished generating future events.")
     }
 }

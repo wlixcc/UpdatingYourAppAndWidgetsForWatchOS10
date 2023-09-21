@@ -55,8 +55,11 @@
         }
       }
     },
-    "A cutie, common to many a backyard." : {
+    "A cutie, common to many backyards." : {
       "comment" : "Bird 1 summary"
+    },
+    "A frequent flier among the flowers." : {
+      "comment" : "Bird 6 summary"
     },
     "Cardinal" : {
       "comment" : "Bird 5 name",
@@ -165,7 +168,7 @@
       }
     },
     "Disliked Foods" : {
-      "comment" : "A short phrase that describes a sort criteria based on birds' disliked foods.",
+      "comment" : "A short phrase that describes a sort criteria based on the birds' disliked foods.",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -430,7 +433,7 @@
       }
     },
     "Favorite Food" : {
-      "comment" : "A short phrase that describes a sort criteria based on birds' favorite foods.",
+      "comment" : "A short phrase that describes a sort criteria based on the birds' favorite foods.",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -484,6 +487,7 @@
     },
     "Frequent flier amongst the flowers." : {
       "comment" : "Bird 6 summary",
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -748,7 +752,7 @@
       }
     },
     "Not yet seen" : {
-      "comment" : "A phrase used to indicate that a bird has never visited a backyard.",
+      "comment" : "A phrase indicating that a bird has never visited a backyard.",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -907,7 +911,7 @@
       }
     },
     "Recent Backyards" : {
-      "comment" : "A section header title used to show which backyards a bird has last visited.",
+      "comment" : "A section header title for showing which backyards a bird has visited.",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -1013,7 +1017,7 @@
       }
     },
     "Seen %@ ago" : {
-      "comment" : "First variable is a shorthand formatted duration, e.g. 4d, 30m, or 20s.\nThe first variable is a shorthand formatted duration. For example, 4d, 30m, or 20s.",
+      "comment" : "The first variable is a shorthand formatted duration, such as 4d, 30m, or 20s.\nThe first variable is a shorthand formatted duration. For example, 4d, 30m, or 20s.",
       "localizations" : {
         "ar" : {
           "stringUnit" : {

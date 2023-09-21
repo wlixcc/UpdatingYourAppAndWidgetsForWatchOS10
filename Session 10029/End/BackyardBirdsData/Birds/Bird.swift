@@ -14,8 +14,8 @@ import SwiftUI
     @Attribute(.unique) public var id: UUID
     public var creationDate: Date
     
-    public var species: BirdSpecies!
-    public var favoriteFood: BirdFood!
+    public var species: BirdSpecies?
+    public var favoriteFood: BirdFood?
     public var dislikedFoods: [BirdFood]
     public var colors: BirdPalette
     public var tag: String?
@@ -24,8 +24,8 @@ import SwiftUI
     /// The preferred time of day when presenting in the UI.
     public var backgroundTimeInterval: Double
     
-    @Transient public var speciesName: String { species.info.name }
-    @Transient public var speciesSummary: String { species.info.summary }
+    @Transient public var speciesName: String { species?.info.name ?? "" }
+    @Transient public var speciesSummary: String { species?.info.summary ?? "" }
     
     @Transient public var visitStatus: BirdVisitStatus {
         if let lastKnownVisit {
@@ -41,6 +41,7 @@ import SwiftUI
         self.colors = colors
         self.tag = tag?.rawValue
         self.backgroundTimeInterval = backgroundTimeInterval
+        self.dislikedFoods = []
     }
     
     public func updateVisitStatus(visitedOn date: Date) {

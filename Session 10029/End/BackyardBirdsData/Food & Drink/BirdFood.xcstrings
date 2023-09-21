@@ -2,7 +2,7 @@
   "sourceLanguage" : "en",
   "strings" : {
     "%@ did not like %@..." : {
-      "comment" : "The first variable is a bird name, and the second variable is a food name. Shown after a bird eats food they didn't like.",
+      "comment" : "The first variable is a bird name, and the second variable is a food name. These display after a bird eats food they didn't like.",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -61,7 +61,7 @@
       }
     },
     "%@ enjoyed %@!" : {
-      "comment" : "The first variable is a bird name, and the second variable is a food name. Shown after a bird eats food they liked.",
+      "comment" : "The first variable is a bird name, and the second variable is a food name. These display after a bird eats food they liked.",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -120,7 +120,7 @@
       }
     },
     "%@ had no opinion on %@." : {
-      "comment" : "    The first variable is a bird name, and the second variable is a food name. Shown after a bird eats food they liked or disliked.",
+      "comment" : "The first variable is a bird name, and the second variable is a food name. These display after a bird eats food they liked or disliked.",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -179,7 +179,7 @@
       }
     },
     "%@ loved %@!" : {
-      "comment" : "The first variable is a bird name, and the second variable is a food name. Shown after a bird eats their favorite food.",
+      "comment" : "The first variable is a bird name, and the second variable is a food name. These display after a bird eats their favorite food.",
       "localizations" : {
         "ar" : {
           "stringUnit" : {

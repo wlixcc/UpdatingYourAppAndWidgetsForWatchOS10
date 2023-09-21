@@ -1322,7 +1322,11 @@
         }
       }
     },
+    "Water is OK" : {
+
+    },
     "Water is okay" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {

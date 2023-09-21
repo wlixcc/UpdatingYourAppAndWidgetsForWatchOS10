@@ -2,7 +2,7 @@
   "sourceLanguage" : "en",
   "strings" : {
     "Afternoon" : {
-      "comment" : "Short phrase that describes the afternoon time of day for a backyard.",
+      "comment" : "A short phrase that describes the afternoon time of day for a backyard.",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -369,7 +369,7 @@
       }
     },
     "Food Empty" : {
-      "comment" : "Short phrase that describes an issue due to no food remaining.",
+      "comment" : "A short phrase that describes an issue due to no food remaining.",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -422,7 +422,7 @@
       }
     },
     "Food Low" : {
-      "comment" : "Short phrase that describes an issue due to little food remaining.",
+      "comment" : "A short phrase that describes an issue due to little food remaining.",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -475,7 +475,7 @@
       }
     },
     "Morning" : {
-      "comment" : "Short phrase that describes the morning time of day for a backyard.",
+      "comment" : "A short phrase that describes the morning time of day for a backyard.",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -528,7 +528,7 @@
       }
     },
     "Night" : {
-      "comment" : "Short phrase that describes the night time of day for a backyard.",
+      "comment" : "A short phrase that describes the night time of day for a backyard.",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -686,7 +686,7 @@
       }
     },
     "Sunrise" : {
-      "comment" : "Short phrase that describes the sunrise time of day for a backyard.",
+      "comment" : "A short phrase that describes the sunrise time of day for a backyard.",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -739,7 +739,7 @@
       }
     },
     "Sunset" : {
-      "comment" : "Short phrase that describes the sunset time of day for a backyard.",
+      "comment" : "A short phrase that describes the sunset time of day for a backyard.",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -792,7 +792,7 @@
       }
     },
     "Supplies Empty" : {
-      "comment" : "Short phrase that describes an issue due to no supplies remaining.",
+      "comment" : "A short phrase that describes an issue due to no supplies remaining.",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -845,7 +845,7 @@
       }
     },
     "Supplies Low" : {
-      "comment" : "Short phrase that describes an issue due to few supplies remaining.",
+      "comment" : "A short phrase that describes an issue due to few supplies remaining.",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -898,7 +898,7 @@
       }
     },
     "Water Empty" : {
-      "comment" : "Short phrase that describes an issue due to no water remaining.",
+      "comment" : "A short phrase that describes an issue due to no water remaining.",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -951,7 +951,7 @@
       }
     },
     "Water Low" : {
-      "comment" : "Short phrase that describes an issue due to little water remaining.",
+      "comment" : "A short phrase that describes an issue due to little water remaining.",
       "localizations" : {
         "ar" : {
           "stringUnit" : {

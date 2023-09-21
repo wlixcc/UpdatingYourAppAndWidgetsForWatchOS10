@@ -10,7 +10,7 @@ import SwiftData
 import BackyardBirdsData
 
 public struct BackyardList: View {
-    @Query(sort: [.init(\.creationDate)])
+    @Query(sort: [.init(\Backyard.creationDate)])
     private var backyards: [Backyard]
     
     public init() { }

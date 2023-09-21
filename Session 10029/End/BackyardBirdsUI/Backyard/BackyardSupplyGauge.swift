@@ -33,11 +33,11 @@ public struct BackyardSupplyGauge: View {
     var gaugeLabel: some View {
         switch supplies {
         case .food:
-            backyard.birdFood.image
+            backyard.birdFood!.image
                 .scaledToFit()
                 .padding(-4)
                 .transition(.scale(scale: 0.5).combined(with: .opacity))
-                .id(backyard.birdFood.id)
+                .id(backyard.birdFood!.id)
         case .water:
             Image(systemName: "drop.fill")
                 .foregroundStyle(.linearGradient(colors: [.mint, .cyan], startPoint: .top, endPoint: .bottom))
