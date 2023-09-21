@@ -1,3 +1,11 @@
+
+
+> The difference between the official website code and this project, this project fixed some compile-time errors for session 10029 
+
+
+----
+
+
 # Updating your app and widgets for watchOS 10
 
 Integrate SwiftUI elements and watch-specific features, and build widgets for the Smart Stack.
